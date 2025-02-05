@@ -11,8 +11,22 @@
     <?php
     //Creamos una página donde se almacene una cookie y un botón para eliminarlas
     setcookie("usuario", "Juan", time() + 3600);
-    
+
+    //Creamos el método de eliminación
+    if (isset($_POST["borrar"])) {
+        setcookie("usuario", "", time() - 3600);
+        echo "La cookie se ha eliminado";
+    } else {
+        if (isset($_COOKIE["usuario"])) {
+            echo "El usuario es " . $_COOKIE["usuario"] . "<br>";
+        } else {
+            echo "No hay usuario <br>";
+        }
+    }
     ?>
+    <form method="post">
+        <button type="submit" name="borrar">Borrar cookie</button>
+    </form>
 </body>
 
 </html>
