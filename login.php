@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (isset($_SESSION['usuario'])) {
+    header('Location: aplicacion.php');
+    exit();
+}
+if (isset($_GET['error'])) {
+    $error = "Usuario o contraseña incorrecta";
+} else {
+    $error = "";
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +21,9 @@
 
 <body>
     <h2>Iniciar sesión</h2>
+    <p style='color:red;'>
+        <?php echo $error . "<br>"; ?>
+    </p>
     <form action="http://localhost/servidor/autenticacion.php" method="POST">
         <label>User</label>
         <input type="text" name="usuario" required><br>
