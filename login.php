@@ -1,10 +1,10 @@
 <?php
 session_start();
-if (isset($_SESSION['usuario'])) {
-    header('Location: aplicacion.php');
+if (isset($_SESSION["usuario"])) {
+    header("Location: aplicacion . php");
     exit();
 }
-if (isset($_GET['error'])) {
+if (isset($_GET["error"])) {
     $error = "Usuario o contraseña incorrecta";
 } else {
     $error = "";
@@ -21,10 +21,10 @@ if (isset($_GET['error'])) {
 
 <body>
     <h2>Iniciar sesión</h2>
-    <p style='color:red;'>
+    <p style="color:red;">
         <?php echo $error . "<br>"; ?>
     </p>
-    <form action="http://localhost/servidor/autenticacion.php" method="POST">
+    <form action="http://localhost/servidor/autentificacion.php" method="POST">
         <label>User</label>
         <input type="text" name="usuario" required><br>
         <label>Password</label>
