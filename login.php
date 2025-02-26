@@ -24,7 +24,7 @@ if (isset($_GET["error"])) {
     <p style="color:red;">
         <?php echo $error . "<br>"; ?>
     </p>
-    <form action="http://localhost/servidor/autentificacion.php" method="POST">
+    <form action="http://localhost/Servidor/autentificacion.php" method="POST">
         <label>User</label>
         <input type="text" name="usuario" required><br>
         <label>Password</label>

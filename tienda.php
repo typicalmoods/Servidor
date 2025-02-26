@@ -16,14 +16,14 @@
             if ($username === 'admin') {
                 if ($password === '1234') {
                     echo '<h1>Usuario correcto</h1>';
-                    echo '<a href="http://localhost/cliente/ej1tienda.html">Tienda</a>';
+                    echo '<a href="http://localhost/Cliente/ej1tienda.html">Tienda</a>';
                 } else {
                     echo '<h1>Error en la contraseña</h1>';
-                    echo '<a href="http://localhost/cliente/ej1loguin.html">Atrás</a>';
+                    echo '<a href="http://localhost/Cliente/ej1loguin.html">Atrás</a>';
                 }
             } else {
                 echo '<h1>Usuario no existe</h1>';
-                echo '<a href="http://localhost/cliente/ej1loguin.html">Atrás</a>';
+                echo '<a href="http://localhost/Cliente/ej1loguin.html">Atrás</a>';
             }
         } elseif (isset($_POST['vaper3000']) && isset($_POST['vaper1500']) && isset($_POST['liquido']) && isset($_POST['envio'])) {
             $vaper3000 = intval($_POST['vaper3000']);
@@ -51,7 +51,7 @@
             echo '<p>Total con IVA: ' . number_format($totalIVA, 2) . '€</p>';
         } else {
             echo '<h1>Error: Datos no válidos</h1>';
-            echo '<a href="http://localhost/cliente/ej1loguin.html">Atrás</a>';
+            echo '<a href="http://localhost/Cliente/ej1loguin.html">Atrás</a>';
         }
     }
     ?>
